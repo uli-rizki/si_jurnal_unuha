@@ -1,9 +1,10 @@
 <?php
 
-$config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
-$config['base_url'] .= "://".$_SERVER['HTTP_HOST'];
-$config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
+$server = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
+$server .= "://".$_SERVER['HTTP_HOST'];
 
-$config['dir_app']
+const APP_DIR = "si_jurnal_unuha";
+$base_dir = $server."/".APP_DIR;
+$base_url = $server."/".APP_DIR;
 
 ?>
